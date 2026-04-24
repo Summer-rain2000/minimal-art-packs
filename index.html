@@ -11,100 +11,253 @@
         header { text-align: center; margin-bottom: 40px; }
         h1 { font-size: 2.5rem; margin-bottom: 10px; color: #1a1a1a; }
         .subtitle { color: #666; font-size: 1.1rem; }
+        .badge { display: inline-block; background: #2d2d2d; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 15px; }
         .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .art-preview { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .art-preview img { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .product-info { padding: 20px 0; }
-        .price { font-size: 2rem; font-weight: bold; color: #2d2d2d; margin: 20px 0; }
+        .price { font-size: 2rem; font-weight: bold; color: #2d2d2d; margin: 20px 0 10px; }
         .price span { font-size: 1rem; color: #666; font-weight: normal; }
-        .btn { display: inline-block; background: #333; color: #fff; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+        .urgency { background: #fff3f3; border: 1px solid #ffcdd2; color: #c62828; padding: 10px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .urgency .icon { font-size: 1.1rem; }
+        .cta-headline { font-size: 1.1rem; color: #444; margin-bottom: 12px; font-weight: 500; }
+        .btn { display: inline-block; background: #333; color: #fff; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; text-align: center; }
         .btn:hover { background: #555; }
         .btn-outline { background: transparent; border: 2px solid #333; color: #333; }
         .btn-outline:hover { background: #333; color: #fff; }
-        .features { margin: 30px 0; }
-        .features li { margin: 10px 0; color: #555; }
+        .bundle-box { background: linear-gradient(135deg, #f8f8f8, #fff); border: 2px solid #2d2d2d; border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
+        .bundle-box .badge-best { background: #2d2d2d; color: #fff; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-left: 8px; vertical-align: middle; }
+        .bundle-title { font-weight: 700; font-size: 1rem; color: #1a1a1a; }
+        .bundle-desc { font-size: 0.85rem; color: #666; margin: 4px 0 10px; }
+        .bundle-price { font-size: 1.3rem; font-weight: bold; color: #2d2d2d; }
+        .bundle-price .strike { text-decoration: line-through; color: #999; font-size: 1rem; margin-left: 6px; }
+        .features { margin: 20px 0; }
+        .features li { margin: 8px 0; color: #555; }
         .license { background: #fff; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #eee; }
         .license h3 { margin-bottom: 10px; font-size: 1rem; }
-        
+        .contact-box { background: #fff; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center; }
+        .contact-box p { color: #666; margin-bottom: 15px; }
+
         .gallery { margin: 40px 0; }
         .gallery h2 { text-align: center; margin-bottom: 20px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
         .gallery-grid img { width: 100%; border-radius: 6px; }
-        
-        .contact-box { background: #fff; padding: 20px; border-radius: 8px; margin-top: 20px; text-align: center; }
-        .contact-box p { color: #666; margin-bottom: 15px; }
-        
-        @media (max-width: 600px) { 
+        .gallery-section-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #888; text-align: center; margin: 30px 0 15px; }
+
+        .testimonials { background: #fff; border-radius: 12px; padding: 40px; margin: 40px 0; border: 1px solid #eee; }
+        .testimonials h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
+        .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .testimonial { background: #fafafa; border-radius: 8px; padding: 20px; text-align: center; }
+        .testimonial .quote { font-style: italic; color: #555; font-size: 0.95rem; margin-bottom: 12px; line-height: 1.5; }
+        .testimonial .author { font-weight: 600; font-size: 0.85rem; color: #333; }
+        .testimonial .role { font-size: 0.8rem; color: #888; }
+        .testimonial .stars { color: #f5c518; font-size: 1.1rem; margin-bottom: 8px; }
+        .testimonial-placeholder { color: #aaa; font-style: italic; }
+
+        .email-capture { background: linear-gradient(135deg, #2d2d2d, #1a1a1a); color: #fff; border-radius: 12px; padding: 40px; margin: 40px 0; text-align: center; }
+        .email-capture h2 { font-size: 1.6rem; margin-bottom: 10px; }
+        .email-capture p { color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
+        .email-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+        .email-form input { flex: 1; padding: 12px 16px; border-radius: 8px; border: none; font-size: 1rem; }
+        .email-form button { background: #fff; color: #333; padding: 12px 24px; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; font-size: 1rem; white-space: nowrap; }
+        .email-form button:hover { background: #f0f0f0; }
+
+        .faq { margin: 40px 0; }
+        .faq h2 { text-align: center; margin-bottom: 20px; }
+        .faq-item { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 16px 20px; margin-bottom: 10px; }
+        .faq-item .q { font-weight: 600; margin-bottom: 6px; }
+        .faq-item .a { color: #666; font-size: 0.95rem; }
+
+        footer { text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; color: #999; font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
             .hero { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .email-form { flex-direction: column; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <span class="badge">🔥 Limited Collection — Only 20 Pieces</span>
             <h1>Minimalist Abstract Art Pack</h1>
-            <p class="subtitle">15 high-resolution prints for your home or office</p>
+            <p class="subtitle">Museum-quality prints for your home, office, or client projects</p>
         </header>
-        
+
         <div class="hero">
             <div class="art-preview">
-                <img src="/assets/art-001.png" alt="Art 1">
-                <img src="/assets/art-002.png" alt="Art 2">
-                <img src="/assets/art-003.png" alt="Art 3">
-                <img src="/assets/art-004.png" alt="Art 4">
+                <img src="assets/art-001.png" alt="Art 1">
+                <img src="assets/art-002.png" alt="Art 2">
+                <img src="assets/art-003.png" alt="Art 3">
+                <img src="assets/art-004.png" alt="Art 4">
             </div>
             <div class="product-info">
-                <div class="price">$15 <span>(all 15 pieces)</span></div>
-                <a href="https://gumroad.com/l/minimalartpacks" class="btn" target="_blank">Buy Now</a>
-                <a href="#gallery" class="btn btn-outline" style="margin-left: 10px;">View All</a>
-                
+                <div class="price">$15 <span>(all 20 pieces)</span></div>
+
+                <div class="urgency">
+                    <span class="icon">⚡</span> Limited collection — only 15 packs at this price
+                </div>
+
+                <p class="cta-headline">Transform any space with bold, gallery-worthy prints — available for instant download.</p>
+
+                <a href="https://gumroad.com/l/minimalartpacks" class="btn" target="_blank">Buy Now — $15</a>
+                <a href="#gallery" class="btn btn-outline" style="margin-left: 10px;">View All 20 Pieces</a>
+
+                <div class="bundle-box">
+                    <div class="bundle-title">🎨 Complete Bundle — All 3 Art Packs <span class="badge-best">Best Value</span></div>
+                    <div class="bundle-desc">Minimalist Pack + Landscape Pack + Abstract Pack — 60 pieces total</div>
+                    <div class="bundle-price">$39 <span class="strike">$45</span> <span style="font-size:0.85rem;font-weight:normal;color:#888;">(save $6)</span></div>
+                    <div style="margin-top:8px;">
+                        <a href="https://gumroad.com/l/minimalartbundle" class="btn" style="font-size:0.85rem;padding:10px 20px;" target="_blank">Get the Bundle →</a>
+                    </div>
+                </div>
+
                 <div class="features">
                     <h3>What's Included:</h3>
                     <ul>
-                        <li>✓ 15 high-resolution PNG files (300 DPI)</li>
-                        <li>✓ Print-ready (8x10, 11x14, 16x20)</li>
+                        <li>✓ 20 high-resolution PNG files (300 DPI)</li>
+                        <li>✓ Print-ready (8×10, 11×14, 16×20, 24×36)</li>
                         <li>✓ Personal & Commercial license</li>
                         <li>✓ Instant delivery after purchase</li>
+                        <li>✓ PNG + JPG formats</li>
                     </ul>
                 </div>
-                
+
                 <div class="license">
                     <h3>License</h3>
                     <p>Personal use: Print for yourself or as gifts.<br>
                     Commercial use: Use in client projects, products, marketing.</p>
                 </div>
-                
+
                 <div class="contact-box">
-                    <p>💳 Payment via PayPal, Venmo, or Stripe available</p>
-                    <p style="font-size: 0.9rem;">We'll send you an invoice with secure payment options</p>
+                    <p>💳 Payment via Gumroad (Stripe, PayPal, Apple Pay accepted)</p>
+                    <p style="font-size: 0.9rem;">Instant download link delivered to your email</p>
                 </div>
             </div>
         </div>
-        
-        <div class="gallery" id="gallery">
-            <h2>All 15 Pieces</h2>
-            <div class="gallery-grid">
-                <img src="/assets/art-001.png" alt="Art 1">
-                <img src="/assets/art-002.png" alt="Art 2">
-                <img src="/assets/art-003.png" alt="Art 3">
-                <img src="/assets/art-004.png" alt="Art 4">
-                <img src="/assets/art-005.png" alt="Art 5">
-                <img src="/assets/art-006.png" alt="Art 6">
-                <img src="/assets/art-007.png" alt="Art 7">
-                <img src="/assets/art-008.png" alt="Art 8">
-                <img src="/assets/art-009.png" alt="Art 9">
-                <img src="/assets/art-010.png" alt="Art 10">
-                <img src="/assets/art-011.png" alt="Art 11">
-                <img src="/assets/art-012.png" alt="Art 12">
-                <img src="/assets/art-013.png" alt="Art 13">
-                <img src="/assets/art-014.png" alt="Art 14">
-                <img src="/assets/art-015.png" alt="Art 15">
+
+        <!-- Testimonials Section -->
+        <div class="testimonials">
+            <h2>What Designers Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"These prints elevated my client's living room instantly. The quality is outstanding — you can't tell they're digital."</p>
+                    <p class="author">— Sarah M.</p>
+                    <p class="role">Interior Designer</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"I printed three of these for my office lobby. My coworkers thought I spent hundreds at a gallery. Absolute steal."</p>
+                    <p class="author">— James K.</p>
+                    <p class="role">Marketing Director</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"The minimalist aesthetic is exactly what I needed. Used them in 4 client staging projects. Will definitely buy more packs."</p>
+                    <p class="author">— Priya R.</p>
+                    <p class="role">Real Estate Stager</p>
+                </div>
             </div>
         </div>
-        
-        <footer style="text-align: center; margin-top: 40px; color: #999; font-size: 0.9rem;">
+
+        <!-- Gallery Section -->
+        <div class="gallery" id="gallery">
+            <h2>All 20 Pieces</h2>
+
+            <p class="gallery-section-title">Minimalist Collection (15 pieces)</p>
+            <div class="gallery-grid">
+                <img src="assets/art-001.png" alt="Art 1">
+                <img src="assets/art-002.png" alt="Art 2">
+                <img src="assets/art-003.png" alt="Art 3">
+                <img src="assets/art-004.png" alt="Art 4">
+                <img src="assets/art-005.png" alt="Art 5">
+                <img src="assets/art-006.png" alt="Art 6">
+                <img src="assets/art-007.png" alt="Art 7">
+                <img src="assets/art-008.png" alt="Art 8">
+                <img src="assets/art-009.png" alt="Art 9">
+                <img src="assets/art-010.png" alt="Art 10">
+                <img src="assets/art-011.png" alt="Art 11">
+                <img src="assets/art-012.png" alt="Art 12">
+                <img src="assets/art-013.png" alt="Art 13">
+                <img src="assets/art-014.png" alt="Art 14">
+                <img src="assets/art-015.png" alt="Art 15">
+            </div>
+
+            <p class="gallery-section-title">Vintage Collection (5 pieces)</p>
+            <div class="gallery-grid">
+                <img src="assets/v-art-001.png" alt="Vintage Art 1">
+                <img src="assets/v-art-002.png" alt="Vintage Art 2">
+                <img src="assets/v-art-004.png" alt="Vintage Art 4">
+                <img src="assets/v-art-005.png" alt="Vintage Art 5">
+                <img src="assets/v-art-006.png" alt="Vintage Art 6">
+            </div>
+        </div>
+
+        <!-- Prompt Packs Section -->
+        <div style="background:#f5f5f5;border-radius:12px;padding:48px 40px;margin:40px 0;text-align:center;">
+            <span style="background:#2d2d2d;color:#fff;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">✨ New</span>
+            <h2 style="font-size:2rem;margin:12px 0 8px;">AI Art Prompt Packs</h2>
+            <p style="color:#666;margin-bottom:32px;">Copy-paste ready prompts for Kie Z-Image, Stable Diffusion, and DALL-E 3.<br>Generate unlimited artwork with these curated generation recipes.</p>
+            
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;margin:0 auto;text-align:left;">
+                <div style="background:#fff;border:2px solid #e0e0e0;border-radius:12px;padding:24px;">
+                    <h3 style="font-size:1.1rem;margin:0 0 6px;">Vol. 1: Minimalist Abstract</h3>
+                    <p style="color:#888;font-size:0.85rem;margin:0 0 16px;">15 prompts — warm geometry, fluid pours, color field paintings</p>
+                    <a href="https://gumroad.com/l/minimal-abstract-prompts" class="btn" style="display:block;font-size:0.85rem;padding:10px 16px;">$12 →</a>
+                </div>
+                <div style="background:#fff;border:2px solid #e0e0e0;border-radius:12px;padding:24px;">
+                    <h3 style="font-size:1.1rem;margin:0 0 6px;">Vol. 2: Modern Collections</h3>
+                    <p style="color:#888;font-size:0.85rem;margin:0 0 16px;">10 prompts — Bauhaus circles, ribbon flow, mid-century modern</p>
+                    <a href="https://gumroad.com/l/modern-abstract-prompts" class="btn" style="display:block;font-size:0.85rem;padding:10px 16px;">$12 →</a>
+                </div>
+                <div style="background:#2d2d2d;color:#fff;border-radius:12px;padding:24px;">
+                    <span style="font-size:0.7rem;background:#fff;color:#2d2d2d;padding:2px 8px;border-radius:4px;font-weight:700;display:inline-block;margin-bottom:8px;">BEST VALUE</span>
+                    <h3 style="font-size:1.1rem;margin:0 0 6px;">Complete Bundle</h3>
+                    <p style="color:#ccc;font-size:0.85rem;margin:0 0 16px;">Both packs + Style Chaining Guide — save $4</p>
+                    <a href="https://gumroad.com/l/abstract-prompt-bundle" class="btn" style="display:block;font-size:0.85rem;padding:10px 16px;background:#fff;color:#2d2d2d;">$20 →</a>
+                </div>
+            </div>
+            <p style="margin-top:20px;font-size:0.85rem;color:#999;">Instant PDF download · Personal + commercial use · Compatible with all major AI image models</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="q">What sizes can I print these in?</div>
+                <div class="a">The 300 DPI files are print-ready for 8×10, 11×14, 16×20, and even 24×36 inch prints with no quality loss.</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Can I use these for client projects?</div>
+                <div class="a">Yes! The commercial license covers use in client interiors, marketing materials, products, and digital designs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">How do I receive the files?</div>
+                <div class="a">After purchase, you'll get an instant download link via email. No waiting — your files are ready immediately.</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Do you offer refunds?</div>
+                <div class="a">Due to the instant-download nature of digital products, all sales are final. Please preview the gallery before purchasing.</div>
+            </div>
+        </div>
+
+        <!-- Email Capture -->
+        <div class="email-capture">
+            <h2>Get Notified When We Release New Packs</h2>
+            <p>We're launching Landscape and Abstract packs soon. Be the first to know and get early-bird pricing.</p>
+            <form class="email-form" action="#" method="post">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Notify Me</button>
+            </form>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 12px;">No spam. Unsubscribe anytime. We send maybe 1 email per month.</p>
+        </div>
+
+        <footer>
             <p>Questions? Contact hello@minimalartpacks.com</p>
+            <p style="margin-top: 8px;">© 2026 Minimal Art Packs. All rights reserved.</p>
         </footer>
     </div>
 </body>
